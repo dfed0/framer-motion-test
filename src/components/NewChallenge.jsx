@@ -17,7 +17,7 @@ export default function NewChallenge({ onDone }) {
   const { addChallenge } = useContext(ChallengesContext)
 
   function handleIfChange() {
-    const animation = animate(
+    animate(
       'input, textarea',
       { borderColor: '#d9e2f1' },
       { duration: 0.00001 }
@@ -65,6 +65,7 @@ export default function NewChallenge({ onDone }) {
 
     onDone()
     addChallenge(challenge)
+    
   }
 
   return (
